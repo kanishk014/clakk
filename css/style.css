@@ -2045,3 +2045,8 @@ footer .credits {
     font-size: 1.3rem;
   }
 }
+
+.navlogo {
+  height: 50px;
+  width: 250px;
+}
