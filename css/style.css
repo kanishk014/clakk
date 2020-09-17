@@ -102,6 +102,11 @@ a:hover {
   color: #555555;
 }
 
+.positions {
+  color: #000000;
+  font-weight: bold;
+}
+
 .no-margin {
   margin: 0;
 }
