@@ -2036,7 +2036,7 @@ footer .credits {
   }
 }
 
-@media (max-width: 575px) {
+@media (max-width: 480px) {
   .box-collapse .title-box-d {
     left: 35px;
   }
