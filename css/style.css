@@ -1961,6 +1961,11 @@ footer .credits {
     font-size: 2rem;
     margin: 1rem 0;
   }
+
+  .contact-agent-btn {
+    float: right;
+    display: inline-block !important;
+  }
 }
 
 @media (max-width: 991px) {

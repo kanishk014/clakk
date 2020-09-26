@@ -376,7 +376,10 @@
                   <div class="col-sm-12">
                     <div class="title-box-d">
                       <h3 class="title-d">Property Description</h3>
-                      <button class="btn btn-b-n contact-agent-btn">
+                      <button
+                        class="btn btn-b-n contact-agent-btn"
+                        style="display: none"
+                      >
                         Contact Agent
                       </button>
                     </div>
@@ -437,7 +440,7 @@
                   role="tab"
                   aria-controls="pills-video"
                   aria-selected="true"
-                  >Video</a
+                  >Facts</a
                 >
               </li>
               <li class="nav-item">
@@ -462,6 +465,18 @@
                   aria-controls="pills-map"
                   aria-selected="false"
                   >Ubication</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  id="price-trends-tab"
+                  data-toggle="pill"
+                  href="#price-trends"
+                  role="tab"
+                  aria-controls="price-trends"
+                  aria-selected="false"
+                  >Price Trends</a
                 >
               </li>
             </ul>
@@ -504,6 +519,12 @@
                   allowfullscreen
                 ></iframe>
               </div>
+              <div
+                class="tab-pane fade"
+                id="price-trends"
+                role="tabpanel"
+                aria-labelledby="price-trends-tab"
+              ></div>
             </div>
           </div>
           <div class="col-md-12">
