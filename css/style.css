@@ -283,6 +283,7 @@ a:hover {
 .title-box-d .title-d {
   font-weight: 600;
   font-size: 24px;
+  display: inline-block;
 }
 
 .title-box-d .title-d:after {
@@ -2040,4 +2041,8 @@ footer .credits {
 .navlogo {
   height: 35px;
   width: 175px;
+}
+
+.contact-agent-btn {
+  float: right;
 }
