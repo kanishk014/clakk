@@ -376,12 +376,14 @@
                   <div class="col-sm-12">
                     <div class="title-box-d">
                       <h3 class="title-d">Property Description</h3>
-                      <button
-                        class="btn btn-b-n contact-agent-btn"
-                        style="display: none"
-                      >
-                        Contact Agent
-                      </button>
+                      <a href="#"
+                        ><button
+                          class="btn btn-b-n contact-agent-btn"
+                          style="display: none"
+                        >
+                          Contact Agent
+                        </button>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -425,6 +427,7 @@
               </div>
             </div>
           </div>
+
           <div class="col-md-10 offset-md-1">
             <ul
               class="nav nav-pills-a nav-pills mb-3 section-t3"
@@ -479,6 +482,18 @@
                   >Price Trends</a
                 >
               </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  id="emi-calc-tab"
+                  data-toggle="pill"
+                  href="#emi-calc"
+                  role="tab"
+                  aria-controls="emi-calc"
+                  aria-selected="false"
+                  >EMI Calculator</a
+                >
+              </li>
             </ul>
             <div class="tab-content" id="pills-tabContent">
               <div
@@ -487,14 +502,14 @@
                 role="tabpanel"
                 aria-labelledby="pills-video-tab"
               >
-                <!-- <iframe
+                <iframe
                   style="max-width: 100%"
                   width="1000"
                   height="480"
                   frameborder="0"
                   allowfullscreen
                   src="https://kanishk014.github.io/vrweb/"
-                ></iframe> -->
+                ></iframe>
               </div>
               <div
                 class="tab-pane fade"
@@ -524,7 +539,71 @@
                 id="price-trends"
                 role="tabpanel"
                 aria-labelledby="price-trends-tab"
-              ></div>
+              >
+                <section class="bar-graph bar-graph-vertical bar-graph-two">
+                  <div class="bar-one bar-container">
+                    <div class="bar" data-percentage="40%"></div>
+                    <span class="year">2020</span>
+                  </div>
+                  <div class="bar-two bar-container">
+                    <div class="bar" data-percentage="55%"></div>
+                    <span class="year">2019</span>
+                  </div>
+                  <div class="bar-three bar-container">
+                    <div class="bar" data-percentage="68%"></div>
+                    <span class="year">2018</span>
+                  </div>
+                  <div class="bar-four bar-container">
+                    <div class="bar" data-percentage="82%"></div>
+                    <span class="year">2017</span>
+                  </div>
+                  <div class="bar-five bar-container">
+                    <div class="bar" data-percentage="81%"></div>
+                    <span class="year">2016</span>
+                  </div>
+                  <div class="bar-six bar-container">
+                    <div class="bar" data-percentage="89%"></div>
+                    <span class="year">2015</span>
+                  </div>
+                  <div class="bar-seven bar-container">
+                    <div class="bar" data-percentage="77%"></div>
+                    <span class="year">2014</span>
+                  </div>
+                  <div class="bar-eight bar-container">
+                    <div class="bar" data-percentage="56%"></div>
+                    <span class="year">2013</span>
+                  </div>
+                </section>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="emi-calc"
+                role="tabpanel"
+                aria-labelledby="emi-calc-tab"
+              >
+                <!-- EMI Calculator Widget START -->
+
+                <div
+                  id="ecww-widgetwrapper"
+                  style="
+                    min-width: 250px;
+                    width: 100%;
+                    height: 280px !important;
+                  "
+                >
+                  <div
+                    id="ecww-widget"
+                    style="
+                      position: relative;
+                      padding-top: 0;
+                      padding-bottom: 280px;
+                      height: 0;
+                      overflow: hidden;
+                    "
+                  ></div>
+                </div>
+                <!-- EMI Calculator Widget END -->
+              </div>
             </div>
           </div>
           <div class="col-md-12">
@@ -847,5 +926,45 @@
 
     <!-- Template Main Javascript File -->
     <script src="js/main.js"></script>
+    <script type="text/javascript">
+      (function () {
+        function b() {
+          var a = 280;
+          768 > document.getElementById("ecww-widgetwrapper").offsetWidth &&
+            (a = 840);
+          document
+            .getElementById("ecww-widget-iframe")
+            .setAttribute(
+              "style",
+              "position:absolute;top:0;left:0;width:100%;height:100%;"
+            );
+          document
+            .getElementById("ecww-widget")
+            .setAttribute(
+              "style",
+              "position:relative;padding-top:0;height:0;overflow:hidden;padding-bottom:" +
+                a +
+                "px;"
+            );
+        }
+        window.onload = function () {
+          var a = document.createElement("iframe");
+          a.id = "ecww-widget-iframe";
+          a.frameBorder = 0;
+          a.scrolling = "no";
+          a.width = "800px";
+          a.height = "280px";
+          a.setAttribute(
+            "src",
+            "https://emicalculator.net/widget/2.0/widget.html"
+          );
+          document.getElementById("ecww-widget").appendChild(a);
+          b();
+        };
+        window.onresize = function () {
+          b();
+        };
+      })();
+    </script>
   </body>
 </html>
